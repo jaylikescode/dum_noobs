@@ -16,9 +16,9 @@ def shop():
         if type == "sword":
             types_av = {"level 1" : "wooden sword (10)",
                         "level 2" : "iron sword (20)",
-                        "level 3" : "celestial bronze sword",
-                        "level 4" : "magic sword",
-                        "MAX" : "black hole summoner sword"}
+                        "level 3" : "celestial bronze sword (30)",
+                        "level 4" : "magic sword (50)",
+                        "MAX" : "black hole summoner sword (80)"}
             type_not_valid = False
         elif type == "armor":
             types_av = {"level 1" : "wooden armor (10)",
@@ -30,16 +30,16 @@ def shop():
         elif type == "potion":
             types_av = {"level 1" : "health potion (10)",
                         "level 2" : "speed potion (20)",
-                        "level 3" : "poison potion",
-                        "level 4" : "destruction potion",
-                        "MAX" : "ultra stength potion"}
+                        "level 3" : "poison potion (30)",
+                        "level 4" : "destruction potion (50)",
+                        "MAX" : "ultra stength potion (80)"}
             type_not_valid = False
         elif type == "helper":
             types_av = {"level 1" : "rat (10)",
                         "level 2" : "cat (20)",
-                        "level 3" : "cyborg dog",
-                        "level 4" : "pheonix",
-                        "MAX" : "dragon"}
+                        "level 3" : "cyborg dog (30)",
+                        "level 4" : "pheonix (50)",
+                        "MAX" : "dragon (80)"}
             type_not_valid = False
         else:
             print("That's not valid.")
@@ -84,3 +84,4 @@ def game_loop():
         shop()
 
 game_loop()
+
