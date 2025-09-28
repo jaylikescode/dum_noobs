@@ -3,7 +3,26 @@ import random
 import os
 
 inventory = {}
-
+types_av_sword = {"level 1" : "wooden sword (10)",
+                  "level 2" : "iron sword (20)",
+                  "level 3" : "celestial bronze sword (30)",
+                  "level 4" : "magic sword (50)",
+                  "MAX" : "black hole summoner sword (80)"}
+types_av_armor = {"level 1" : "wooden armor (10)",
+                  "level 2" : "iron armor (20)",
+                  "level 3" : "celestial bronze armor (30)",
+                  "level 4" : "magic armor (50)",
+                  "MAX" : "quantum armor (80)"}
+types_av_potion = {"level 1" : "health potion (10)",
+                   "level 2" : "speed potion (20)",
+                   "level 3" : "poison potion (30)",
+                   "level 4" : "destruction potion (50)",
+                   "MAX" : "ultra stength potion (80)"}
+types_av_helper = {"level 1" : "rat (10)",
+                   "level 2" : "cat (20)",
+                   "level 3" : "cyborg dog (30)",
+                   "level 4" : "pheonix (50)",
+                   "MAX" : "dragon (80)"}
 
 def shop():
     global inventory
@@ -14,32 +33,16 @@ def shop():
     while shop_not_valid:
         type = input("Enter the thing you want: ")
         if type == "sword":
-            types_av = {"level 1" : "wooden sword (10)",
-                        "level 2" : "iron sword (20)",
-                        "level 3" : "celestial bronze sword (30)",
-                        "level 4" : "magic sword (50)",
-                        "MAX" : "black hole summoner sword (80)"}
+            types_av = types_av_sword
             type_not_valid = False
         elif type == "armor":
-            types_av = {"level 1" : "wooden armor (10)",
-                        "level 2" : "iron armor (20)",
-                        "level 3" : "celestial bronze armor (30)",
-                        "level 4" : "magic armor (50)",
-                        "MAX" : "quantum armor (80)"}
+            types_av = types_av_armor
             type_not_valid = False
         elif type == "potion":
-            types_av = {"level 1" : "health potion (10)",
-                        "level 2" : "speed potion (20)",
-                        "level 3" : "poison potion (30)",
-                        "level 4" : "destruction potion (50)",
-                        "MAX" : "ultra stength potion (80)"}
+            types_av = types_av_potion
             type_not_valid = False
         elif type == "helper":
-            types_av = {"level 1" : "rat (10)",
-                        "level 2" : "cat (20)",
-                        "level 3" : "cyborg dog (30)",
-                        "level 4" : "pheonix (50)",
-                        "MAX" : "dragon (80)"}
+            types_av = types_av_helper
             type_not_valid = False
         else:
             print("That's not valid.")
@@ -88,5 +91,6 @@ def game_loop():
         shop()
 
 game_loop()
+
 
 
