@@ -46,6 +46,7 @@ def shop():
             type = input("Try again: ")
     print("Okay. Now, choose one of these:")
     print(types_av)
+    weapon = input("So which one do you choose? ")
 
 def get_insane_chest():
     gold = random.ranint(200, 1000)
@@ -55,15 +56,8 @@ def get_dum_chest():
     gold = random.randint(1, 5)
     return gold
 
-def hit_a_noob():
-    weapon = input("Enter your weapon: ")
-    time.sleep(0.5)
-
-def game_loop():
-    thing_to_do = input("Welcome to the satisfication game of battling dumb noobs. What do you want to do? \n battle,(1) \nbuy stuff(shop)(2), \n or rage-quit before you start playing?(3) ")
-
-    if thing_to_do == "3":
-        print("Okay.")
+def rage_quit():
+    print("Okay.")
         time.sleep(2)
         print("That is fine.")
         time.sleep(1)
@@ -75,8 +69,18 @@ def game_loop():
         time.sleep(1)
         print("1...")
         time.sleep(1)
-        print("You rage-quitted. You lost.Maybe if you didn't, you could have won against noobs. ")
+        print("You rage-quitted. You lost. Now get OUTTA here, ya sucker. ")
         os.abort
+
+def hit_a_noob():
+    weapon = input("Enter your weapon: ")
+    time.sleep(0.5)
+
+def game_loop():
+    thing_to_do = input("Welcome to the satisfication game of battling dumb noobs. What do you want to do? \n battle,(1) \nbuy stuff(shop)(2), \n or rage-quit before you start playing?(3) ")
+
+    if thing_to_do == "3":
+        
     elif thing_to_do == "2":
         print("entering shop...")
         time.sleep(1)
@@ -84,4 +88,5 @@ def game_loop():
         shop()
 
 game_loop()
+
 
