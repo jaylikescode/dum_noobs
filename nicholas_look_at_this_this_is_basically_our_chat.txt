@@ -1,2 +1,3 @@
 JAY: hey nick so I've made a few edits you can look at them in the .py file
 NICHOLAS: got it i will try to edit it soon
+JAY: 
